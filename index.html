@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        color: rgb(160, 4, 17);
+        font: 20px "Indie Flower";
+      }
+      .container {
+        max-width: 90%;
+        margin: auto;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(114, 2, 26);
+      }
+      .registration {
+        border: 2px solid black;
+        padding: 20px;
+      }
+      .birthDay,
+      .name,
+      .gender,
+      .city,
+      .address,
+      .languages {
+        width: 100%;
+        border: 2px ridge rgb(13, 13, 80);
+        padding: 15px 20px;
+        border-radius: none;
+        margin: 15px 0px 20px 0px;
+      }
+      .address textarea {
+        width: 100%;
+        font: 20px "Indie Flower";
+        padding: 10px 10px 10px 10px;
+        border: 1px solid rgba(12, 12, 92, 0.2);
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px black solid;
+
+        padding: 5px;
+        /* text-align: center; */
+      }
+      .table-container {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+      }
+      thead {
+        font-weight: bolder;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="myForm">
+        <header><h2>Registration form</h2></header>
+        <div class="registration">
+          <div class="name">
+            Full name:
+            <br />
+            <input
+              type="text"
+              id="firstName"
+              name="fullName"
+              placeholder="Write your first Name..."
+              required
+            />
+            <input
+              type="text"
+              id="lastName"
+              name="fullName"
+              placeholder="Write your last Name..."
+              required
+            />
+          </div>
+          <div class="birthDay">
+            <label for="birthDay">Date of birth: </label>
+            <input
+              type="text"
+              id="birthDay"
+              name="birthDay"
+              placeholder="Write your text here..."
+              required
+            />
+          </div>
+          <div class="gender">
+            Choose your gender: <br />
+            <label for="female"
+              ><input
+                type="radio"
+                id="female"
+                name="sex"
+                value="Female"
+                required
+              />
+              Female
+            </label>
+            <label for="male"
+              ><input type="radio" id="male" name="sex" value="Male" />Male
+            </label>
+            <label for="custom"
+              ><input
+                type="radio"
+                id="custom"
+                name="sex"
+                value="Custom"
+              />Custom
+            </label>
+            <label for="notSpecified"
+              ><input
+                type="radio"
+                id="notSpecified"
+                name="sex"
+                value="Don't
+              indicate"
+              />
+              Don't indicate
+            </label>
+          </div>
+          <div class="city">
+            <label for="selectCity"
+              >Choose your city:
+              <select name="selectCity" id="selectCity" required>
+                <option value=""></option>
+
+                <option value="Odesa">Odesa</option>
+                <option value="Dnipro">Dnipro</option>
+                <option value="lviv">Lviv</option>
+                <option value="Mykolaiv">Mykolaiv</option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Chernihiv">Chernihiv</option>
+              </select></label
+            >
+          </div>
+          <div class="address">
+            <label for="address">Your address:</label>
+            <br />
+            <textarea
+              name="address"
+              id="address"
+              placeholder="Write your text here..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="languages required">
+            Indicate the languages you speak:
+            <br />
+            <label for="ukrainian"
+              ><input
+                type="checkbox"
+                id="ukrainian"
+                name="languages"
+                value="Ukrainian"
+              />
+              Ukrainian</label
+            >
+            <br />
+            <label for="chinese"
+              ><input
+                type="checkbox"
+                id="chinese"
+                name="languages"
+                value="Chinese"
+              />
+              Chinese
+            </label>
+            <br />
+            <label for="english"
+              ><input
+                type="checkbox"
+                id="english"
+                name="languages"
+                value="English"
+              />
+              English
+            </label>
+            <br />
+            <label for="spanish"
+              ><input
+                type="checkbox"
+                id="spanish"
+                name="languages"
+                value="Spanish"
+              />
+              Spanish
+            </label>
+            <br />
+            <label for="german"
+              ><input
+                type="checkbox"
+                id="german"
+                name="languages"
+                value="German"
+              />
+              German</label
+            >
+          </div>
+          <button type="submit" id="saveForm">Save</button>
+        </div>
+      </form>
+      <div class="table-container">
+        <table class="hide">
+          <tr class="table_fullName">
+            <td>Full name</td>
+          </tr>
+          <tr class="table_birthDay">
+            <td>Date of birth</td>
+          </tr>
+          <tr class="table_gender">
+            <td>Gender</td>
+          </tr>
+          <tr class="table_city">
+            <td>City</td>
+          </tr>
+          <tr class="table_address">
+            <td>Address</td>
+          </tr>
+          <tr class="table_checkBoxes">
+            <td>Languages</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
